@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Caeno.XamarinForms.Toolkit</id>
+    <version>0.9.0-B6</version>
+    <authors>Rafael Veronezi</authors>
+    <owners>Rafael Veronezi</owners>
+    <!--<licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A set tools provided by Caeno to ease development of Xamarin.Forms Applications.</description>
+    <releaseNotes>Initial test release.</releaseNotes>
+    <copyright>Copyright Caeno 2016</copyright>
+    <tags>Xamarin, Xamarin.Forms, Xamarin.Android, Xamarin.iOS</tags>
+    <dependencies>
+      <dependency id="Xamarin.Forms" version="2.3.2.127" />
+    </dependencies>
+  </metadata>
+  <files>
+    
+    <!-- PCL -->
+    <file src="src\Caeno.XamarinForms.Toolkit\bin\Release\Caeno.XamarinForms.Toolkit.dll" target="lib\portable-net45+wp80+win8+wpa81\Caeno.XamarinForms.Toolkit.dll" />
+    <file src="src\Caeno.XamarinForms.Toolkit\bin\Release\Caeno.XamarinForms.Toolkit.pdb" target="lib\portable-net45+wp80+win8+wpa81\Caeno.XamarinForms.Toolkit.pdb" />
+    
+    <!-- Xamarin.Android -->
+    <file src="src\Caeno.XamarinForms.Toolkit.Android\bin\Release\Caeno.XamarinForms.Toolkit.Android.dll" target="lib\MonoAndroid10\Caeno.XamarinForms.Toolkit.Android.dll" />
+    <file src="src\Caeno.XamarinForms.Toolkit\bin\Release\Caeno.XamarinForms.Toolkit.dll" target="lib\MonoAndroid10\Caeno.XamarinForms.Toolkit.dll" />
+
+    <!-- Xamarin.iOS -->
+    <file src="src\Caeno.XamarinForms.Toolkit.iOS\bin\Release\Caeno.XamarinForms.Toolkit.iOS.dll" target="lib\Xamarin.iOS10\Caeno.XamarinForms.Toolkit.iOS.dll" />
+    <file src="src\Caeno.XamarinForms.Toolkit\bin\Release\Caeno.XamarinForms.Toolkit.dll" target="lib\Xamarin.iOS10\Caeno.XamarinForms.Toolkit.dll" />
+    
+  </files>
+</package>
