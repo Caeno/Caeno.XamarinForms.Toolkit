@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout
+  xmlns="http://xamarin.com/schemas/2014/forms" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:toolkit="clr-namespace:Caeno.XamarinForms.Toolkit"
+  x:Class="Caeno.XamarinForms.Toolkit.Controls.PhoneEntry"
+  Orientation="Horizontal">
+  <StackLayout.Resources>
+    <ResourceDictionary>
+      <Style TargetType="Entry">
+        <Setter Property="Margin" Value="0" />
+      </Style>
+      <Style TargetType="Label">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+      </Style>
+    </ResourceDictionary>
+  </StackLayout.Resources>
+
+  <Label Text="(" />
+  <Entry
+		x:Name="PhonePrefix"
+		Placeholder="99"
+		Keyboard="Numeric"
+		TextChanged="TextChanged">
+    <Entry.Behaviors>
+      <toolkit:MaskedEntryBehavior
+				NextElement="{x:Reference PhoneNumber}"
+				InputType="Numeric"
+				MaxLenght="2" />
+    </Entry.Behaviors>
+  </Entry>
+  <Label Text=") " />
+  <Entry
+		x:Name="PhoneNumber"
+		Placeholder="999999999"
+		Keyboard="Numeric"
+		TextChanged="TextChanged"
+		WidthRequest="200">
+    <Entry.Behaviors>
+      <toolkit:MaskedEntryBehavior
+				NextElement="{x:Reference PhoneNumber}"
+				InputType="Numeric"
+				MaxLenght="9" />
+    </Entry.Behaviors>
+  </Entry>
+</StackLayout>
