@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Xamarin.Forms;
 
-namespace Caeno.XamarinForms.Toolkit.Temp
+namespace Caeno.XamarinForms.Toolkit
 {
 	
 	public class RadioBehavior : Behavior<View>

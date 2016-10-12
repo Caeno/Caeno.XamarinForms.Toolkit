@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-namespace Caeno.XamarinForms.Toolkit.Controls
+namespace Caeno.XamarinForms.Toolkit
 {
 
     /// <summary>

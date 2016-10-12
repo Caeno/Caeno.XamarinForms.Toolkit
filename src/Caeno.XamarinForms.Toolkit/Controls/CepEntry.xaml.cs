@@ -8,25 +8,24 @@ using Xamarin.Forms;
 
 namespace Caeno.XamarinForms.Toolkit
 {
-
-    public partial class PhoneEntry : StackLayout
+    public partial class CepEntry : StackLayout
     {
 
         bool _isTypedValue = false;
 
-        public static readonly BindableProperty PhoneProperty =
-            BindableProperty.Create("Phone",
+        public static readonly BindableProperty CepProperty =
+            BindableProperty.Create("Cep",
                 typeof(string),
-                typeof(PhoneEntry),
+                typeof(CepEntry),
                 null,
                 BindingMode.TwoWay,
                 propertyChanged: (bindable, oldValue, newValue) => {
-                    ((PhoneEntry)bindable).LoadPhone((string)newValue);
+                    ((CepEntry)bindable).LoadCep((string)newValue);
                 });
 
-        public string Phone {
-            get { return (string)GetValue(PhoneProperty); }
-            set { SetValue(PhoneProperty, value); }
+        public string Cep {
+            get { return (string)GetValue(CepProperty); }
+            set { SetValue(CepProperty, value); }
         }
 
 
@@ -40,9 +39,9 @@ namespace Caeno.XamarinForms.Toolkit
         }
 
 
-        void LoadPhone(string phone) {
+        void LoadCep(string cep) {
             // Apply validation
-            IsValid = string.IsNullOrWhiteSpace(phone) || (phone.Length >= 10 && phone.Length <= 11);
+            IsValid = string.IsNullOrWhiteSpace(cep) || (cep.Length == 8);
 
             // Check if the value was typed or passed directly via bind
             if (_isTypedValue) {
@@ -51,24 +50,23 @@ namespace Caeno.XamarinForms.Toolkit
             }
 
             // Split number into each segment
-            if (phone.Length == 2) {
-                PhonePrefix.Text = phone;
-            } else if (phone.Length > 2) {
-                PhonePrefix.Text = phone.Substring(0, 2);
-                PhoneNumber.Text = phone.Substring(2, phone.Length - 2);
+            if (cep.Length == 5) {
+                CepSegment1Entry.Text = cep;
+            } else if (cep.Length > 5) {
+                CepSegment1Entry.Text = cep.Substring(0, 5);
+                CepSegment2Entry.Text = cep.Substring(5, cep.Length - 3);
             }
         }
 
-
         void TextChanged(object sender, TextChangedEventArgs e) {
             _isTypedValue = true;
-            Phone = $"{PhonePrefix.Text}{PhoneNumber.Text}";
+            Cep = $"{CepSegment1Entry.Text}{CepSegment2Entry.Text}";
         }
 
-        public PhoneEntry() {
+
+        public CepEntry() {
             InitializeComponent();
         }
 
     }
-
 }

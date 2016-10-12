@@ -3,7 +3,7 @@ using Xamarin.Forms;
 using System.Linq;
 using System.Text;
 
-namespace Caeno.XamarinForms.Toolkit.Temp {
+namespace Caeno.XamarinForms.Toolkit {
 
 	/// <summary>
 	/// A Xamarin.Forms Behavior to enhance Entries with masked entry, such as allowing

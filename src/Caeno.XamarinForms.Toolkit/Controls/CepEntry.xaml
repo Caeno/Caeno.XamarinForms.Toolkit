@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <StackLayout
   xmlns="http://xamarin.com/schemas/2014/forms" 
-  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
   xmlns:toolkit="clr-namespace:Caeno.XamarinForms.Toolkit"
-  x:Class="Caeno.XamarinForms.Toolkit.PhoneEntry"
+  x:Class="Caeno.XamarinForms.Toolkit.CepEntry"
   Orientation="Horizontal">
   <StackLayout.Resources>
     <ResourceDictionary>
@@ -17,31 +17,29 @@
     </ResourceDictionary>
   </StackLayout.Resources>
 
-  <Label Text="(" />
   <Entry
-		x:Name="PhonePrefix"
-		Placeholder="99"
+		x:Name="CepSegment1Entry"
 		Keyboard="Numeric"
+		Placeholder="99999"
+		TextChanged="TextChanged"
+    WidthRequest="80">
+    <Entry.Behaviors>
+      <toolkit:MaskedEntryBehavior
+				NextElement="{x:Reference CepSegment2Entry}"
+				InputType="Numeric"
+				MaxLenght="5" />
+    </Entry.Behaviors>
+  </Entry>
+  <Label Text="-" />
+  <Entry
+		x:Name="CepSegment2Entry"
+		Keyboard="Numeric"
+		Placeholder="999"
 		TextChanged="TextChanged">
     <Entry.Behaviors>
       <toolkit:MaskedEntryBehavior
-				NextElement="{x:Reference PhoneNumber}"
 				InputType="Numeric"
-				MaxLenght="2" />
-    </Entry.Behaviors>
-  </Entry>
-  <Label Text=") " />
-  <Entry
-		x:Name="PhoneNumber"
-		Placeholder="999999999"
-		Keyboard="Numeric"
-		TextChanged="TextChanged"
-		WidthRequest="200">
-    <Entry.Behaviors>
-      <toolkit:MaskedEntryBehavior
-				NextElement="{x:Reference PhoneNumber}"
-				InputType="Numeric"
-				MaxLenght="9" />
+				MaxLenght="3" />
     </Entry.Behaviors>
   </Entry>
 </StackLayout>

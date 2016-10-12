@@ -3,7 +3,8 @@
   xmlns="http://xamarin.com/schemas/2014/forms" 
   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
   xmlns:toolkit="clr-namespace:Caeno.XamarinForms.Toolkit"
-  x:Class="Caeno.XamarinForms.Toolkit.Controls.CpfEntry">
+  x:Class="Caeno.XamarinForms.Toolkit.CpfEntry"
+  Orientation="Horizontal">
   <StackLayout.Resources>
     <ResourceDictionary>
       <Style TargetType="Entry">
