@@ -137,19 +137,27 @@ namespace Caeno.XamarinForms.Toolkit
 		protected override void OnAttachedTo(View view) {
 			base.OnAttachedTo(view);
 
-			tapRecognizer = new TapGestureRecognizer();
-			tapRecognizer.Tapped += OnTapRecognizerTapped;
-			view.GestureRecognizers.Add(tapRecognizer);
-		}
+            if (view is Button) {
+                ((Button)view).Clicked += ItemSelectedHandler;
+            } else {
+                tapRecognizer = new TapGestureRecognizer();
+                tapRecognizer.Tapped += ItemSelectedHandler;
+                view.GestureRecognizers.Add(tapRecognizer);
+            }
+        }
 
 		protected override void OnDetachingFrom(View view) {
 			base.OnDetachingFrom(view);
 
-			view.GestureRecognizers.Remove(tapRecognizer);
-			tapRecognizer.Tapped -= OnTapRecognizerTapped;
+            if (view is Button) {
+                ((Button)view).Clicked -= ItemSelectedHandler;
+            } else {
+                view.GestureRecognizers.Remove(tapRecognizer);
+                tapRecognizer.Tapped -= ItemSelectedHandler;
+            }
 		}
 
-		void OnTapRecognizerTapped(object sender, EventArgs args) {
+		void ItemSelectedHandler(object sender, EventArgs args) {
 			IsChecked = true;
 		}
 

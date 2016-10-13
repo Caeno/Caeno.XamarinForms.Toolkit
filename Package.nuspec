@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Caeno.XamarinForms.Toolkit</id>
-    <version>0.9.1-B7</version>
+    <version>0.9.1-B8</version>
     <authors>Rafael Veronezi</authors>
     <owners>Rafael Veronezi</owners>
     <!--<licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
