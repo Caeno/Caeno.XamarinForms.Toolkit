@@ -9,9 +9,9 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Caeno.XamarinForms.Toolkit.Android.Renderers;
+using Caeno.XamarinForms.Toolkit.Droid.Renderers;
 
-namespace Caeno.XamarinForms.Toolkit.Android
+namespace Caeno.XamarinForms.Toolkit.Droid
 {
     public static class Toolkit
     {
@@ -19,6 +19,7 @@ namespace Caeno.XamarinForms.Toolkit.Android
         public static void Initialize() {
             CircularImageRenderer.Initialize();
             EnhancedFrameRenderer.Initialize();
+            GridViewRenderer.Initialize();
         }
 
     }

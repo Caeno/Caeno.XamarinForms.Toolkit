@@ -22,14 +22,14 @@ namespace Caeno.XamarinForms.Toolkit.iOS.Renderers
 			base.OnElementChanged(e);
 			if (e.NewElement != null) {
 				_control = e.NewElement as EnhancedFrame;
-				this.SetupLayer(_control.BorderWidth, _control?.BorderRadius ?? 5);
+				this.SetupLayer(_control.BorderWidth, _control?.CornerRadius ?? 5);
 			}
 		}
 
 		protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e) {
 			base.OnElementPropertyChanged(sender, e);
-			if (e.PropertyName == EnhancedFrame.OutlineColorProperty.PropertyName || e.PropertyName == EnhancedFrame.BorderWidthProperty.PropertyName) {
-				this.SetupLayer(_control?.BorderWidth ?? 5, _control?.BorderRadius ?? 5);
+			if (e.PropertyName == EnhancedFrame.BorderColorProperty.PropertyName || e.PropertyName == EnhancedFrame.BorderWidthProperty.PropertyName) {
+				this.SetupLayer(_control?.BorderWidth ?? 5, _control?.CornerRadius ?? 5);
 			}
 		}
 
@@ -52,8 +52,8 @@ namespace Caeno.XamarinForms.Toolkit.iOS.Renderers
 			//  this.get_Layer().set_ShadowOpacity(0.8f); 
 			//  this.get_Layer().set_ShadowOffset(new SizeF()); 
 			//} 
-			if (Element.OutlineColor != Color.Default) {
-				this.Layer.BorderColor = base.Element.OutlineColor.ToCGColor();
+			if (Element.BorderColor != Color.Default) {
+				this.Layer.BorderColor = base.Element.BorderColor.ToCGColor();
 				this.Layer.BorderWidth = borderWidth / 2;
 			} else {
 				this.Layer.BorderColor = UIColor.Clear.CGColor;

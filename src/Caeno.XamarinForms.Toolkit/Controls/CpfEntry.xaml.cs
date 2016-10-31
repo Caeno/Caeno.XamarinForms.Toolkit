@@ -16,7 +16,7 @@ namespace Caeno.XamarinForms.Toolkit
     {
 
         bool _isTypedValue = false;
-
+        
         public static readonly BindableProperty CpfProperty =
             BindableProperty.Create("Cpf",
                 typeof(string),
@@ -44,8 +44,8 @@ namespace Caeno.XamarinForms.Toolkit
 
 
         void LoadCpf(string cpf) {
-            // First try to validate if the typed CPF is valid
-            IsValid = cpf.IsValidCPF();
+            // First try to validate the input
+            IsValid = cpf.IsValidCpf();
 
             // Check if the CPF was passed via typing, so ignore loading the segments
             if (_isTypedValue) {

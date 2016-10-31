@@ -2,12 +2,12 @@
 using Android.Graphics;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-using Caeno.XamarinForms.Toolkit.Android.Renderers;
+using Caeno.XamarinForms.Toolkit.Droid.Renderers;
 using Caeno.XamarinForms.Toolkit;
 
 [assembly: ExportRenderer(typeof(CircularImage), typeof(CircularImageRenderer))]
 
-namespace Caeno.XamarinForms.Toolkit.Android.Renderers
+namespace Caeno.XamarinForms.Toolkit.Droid.Renderers
 {
 	public class CircularImageRenderer : ImageRenderer
 	{

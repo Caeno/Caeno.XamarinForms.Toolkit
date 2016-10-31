@@ -16,6 +16,7 @@ namespace Caeno.XamarinForms.Toolkit.iOS
             EnhancedFrameRenderer.Initialize();
             EnhancedTabbedRenderer.Initialize();
             EnhancedViewCellRenderer.Initialize();
+            GridViewRenderer.Initialize();
         }
 
     }

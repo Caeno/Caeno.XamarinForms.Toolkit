@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("Caeno.XamarinForms.Toolkit.Android.Resource", IsApplication=false)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("Caeno.XamarinForms.Toolkit.Droid.Resource", IsApplication=false)]
 
-namespace Caeno.XamarinForms.Toolkit.Android
+namespace Caeno.XamarinForms.Toolkit.Droid
 {
 	
 	

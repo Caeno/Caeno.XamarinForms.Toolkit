@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout 
+  xmlns="http://xamarin.com/schemas/2014/forms" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:toolkit="clr-namespace:Caeno.XamarinForms.Toolkit"
+  x:Class="Caeno.XamarinForms.Toolkit.CnpjEntry"
+  Orientation="Horizontal">
+  <StackLayout.Resources>
+    <ResourceDictionary>
+      <Style TargetType="Entry">
+        <Setter Property="Margin" Value="0" />
+      </Style>
+      <Style TargetType="Label">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+      </Style>
+    </ResourceDictionary>
+  </StackLayout.Resources>
+
+  <Entry
+		x:Name="CnpjSegment1Entry"
+		Placeholder="99"
+		Keyboard="Numeric"
+		TextChanged="TextChanged">
+    <Entry.Behaviors>
+      <toolkit:MaskedEntryBehavior
+				NextElement="{x:Reference CnpjSegment2Entry}"
+				InputType="Numeric"
+				MaxLenght="2" />
+    </Entry.Behaviors>
+  </Entry>
+  <Label Text="." />
+  <Entry
+		x:Name="CnpjSegment2Entry"
+		Keyboard="Numeric"
+		Placeholder="999"
+		TextChanged="TextChanged">
+    <Entry.Behaviors>
+      <toolkit:MaskedEntryBehavior
+				NextElement="{x:Reference CnpjSegment3Entry}"
+				InputType="Numeric"
+				MaxLenght="3" />
+    </Entry.Behaviors>
+  </Entry>
+  <Label Text="." />
+  <Entry
+		x:Name="CnpjSegment3Entry"
+		Keyboard="Numeric"
+		Placeholder="999"
+		TextChanged="TextChanged">
+    <Entry.Behaviors>
+      <toolkit:MaskedEntryBehavior
+				NextElement="{x:Reference CnpjSegment4Entry}"
+				InputType="Numeric"
+				MaxLenght="3" />
+    </Entry.Behaviors>
+  </Entry>
+  <Label Text="/" />
+  <Entry
+		x:Name="CnpjSegment4Entry"
+		Keyboard="Numeric"
+		Placeholder="9999"
+		TextChanged="TextChanged">
+    <Entry.Behaviors>
+      <toolkit:MaskedEntryBehavior
+				NextElement="{x:Reference CnpjSegment5Entry}"
+				InputType="Numeric"
+				MaxLenght="4" />
+    </Entry.Behaviors>
+  </Entry>
+  <Label Text="-" />
+  <Entry
+		x:Name="CnpjSegment5Entry"
+		Keyboard="Numeric"
+		Placeholder="99"
+		TextChanged="TextChanged">
+    <Entry.Behaviors>
+      <toolkit:MaskedEntryBehavior
+				InputType="Numeric"
+				MaxLenght="2" />
+    </Entry.Behaviors>
+  </Entry>
+
+</StackLayout>

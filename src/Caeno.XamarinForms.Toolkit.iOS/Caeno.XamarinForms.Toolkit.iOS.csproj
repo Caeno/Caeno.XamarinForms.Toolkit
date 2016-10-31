@@ -65,6 +65,10 @@
     <Compile Include="Renderers\EnhancedFrameRenderer.cs" />
     <Compile Include="Renderers\EnhancedTabbedRenderer.cs" />
     <Compile Include="Renderers\EnhancedViewCellRenderer.cs" />
+    <Compile Include="Renderers\GridCollectionView.cs" />
+    <Compile Include="Renderers\GridDataSource.cs" />
+    <Compile Include="Renderers\GridViewCell.cs" />
+    <Compile Include="Renderers\GridViewRenderer.cs" />
     <Compile Include="Toolkit.cs" />
   </ItemGroup>
   <ItemGroup>

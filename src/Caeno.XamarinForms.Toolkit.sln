@@ -7,7 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caeno.XamarinForms.Toolkit"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caeno.XamarinForms.Toolkit.iOS", "Caeno.XamarinForms.Toolkit.iOS\Caeno.XamarinForms.Toolkit.iOS.csproj", "{A9AF9AE5-ED09-47BA-A3DC-894DCD5F119C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caeno.XamarinForms.Toolkit.Android", "Caeno.XamarinForms.Toolkit.Android\Caeno.XamarinForms.Toolkit.Android.csproj", "{0039FE40-87C3-40E4-A083-21BF2F1264D5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{FC7AF5C5-749A-4FC7-B59B-44E742C8E4DB}"
+	ProjectSection(SolutionItems) = preProject
+		..\Package.nuspec = ..\Package.nuspec
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caeno.XamarinForms.Toolkit.Droid", "Caeno.XamarinForms.Toolkit.Droid\Caeno.XamarinForms.Toolkit.Droid.csproj", "{0039FE40-87C3-40E4-A083-21BF2F1264D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
