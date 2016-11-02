@@ -170,9 +170,9 @@ namespace Caeno.XamarinForms.Toolkit
                         AnchorX = 0.48;
                         AnchorY = 0.48;
 
-                        await TheGrid.ScaleTo(0.8, 50, Easing.Linear);
+                        await ButtonPanel.ScaleTo(0.8, 50, Easing.Linear);
                         await Task.Delay(100);
-                        await TheGrid.ScaleTo(1, 50, Easing.Linear);
+                        await ButtonPanel.ScaleTo(1, 50, Easing.Linear);
                     });
                 }
 

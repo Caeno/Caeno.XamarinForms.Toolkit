@@ -6,29 +6,29 @@ using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
-[assembly: ExportRenderer(typeof(EnhancedFrame), typeof(EnhancedFrameRenderer))]
+[assembly: ExportRenderer(typeof(RoundedFrame), typeof(RoundedFrameRenderer))]
 
 namespace Caeno.XamarinForms.Toolkit.iOS.Renderers
 {
-	public class EnhancedFrameRenderer : VisualElementRenderer<EnhancedFrame>
+	public class RoundedFrameRenderer : VisualElementRenderer<RoundedFrame>
 	{
 
-		private EnhancedFrame _control;
+		private RoundedFrame _control;
 
-		public EnhancedFrameRenderer() {
+		public RoundedFrameRenderer() {
 		}
 
-		protected override void OnElementChanged(ElementChangedEventArgs<EnhancedFrame> e) {
+		protected override void OnElementChanged(ElementChangedEventArgs<RoundedFrame> e) {
 			base.OnElementChanged(e);
 			if (e.NewElement != null) {
-				_control = e.NewElement as EnhancedFrame;
+				_control = e.NewElement as RoundedFrame;
 				this.SetupLayer(_control.BorderWidth, _control?.CornerRadius ?? 5);
 			}
 		}
 
 		protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e) {
 			base.OnElementPropertyChanged(sender, e);
-			if (e.PropertyName == EnhancedFrame.BorderColorProperty.PropertyName || e.PropertyName == EnhancedFrame.BorderWidthProperty.PropertyName) {
+			if (e.PropertyName == RoundedFrame.BorderColorProperty.PropertyName || e.PropertyName == RoundedFrame.BorderWidthProperty.PropertyName) {
 				this.SetupLayer(_control?.BorderWidth ?? 5, _control?.CornerRadius ?? 5);
 			}
 		}

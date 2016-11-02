@@ -3,50 +3,50 @@ using Xamarin.Forms;
 
 namespace Caeno.XamarinForms.Toolkit
 {
-	public class EnhancedFrame : ContentView
+	public class RoundedFrame : ContentView
 	{
 
 		public readonly static BindableProperty CornerRadiusProperty = 
             BindableProperty.Create("BorderRadius", 
                 typeof(int), 
-                typeof(EnhancedFrame), 5, 
+                typeof(RoundedFrame), 5, 
                 BindingMode.OneWay);
 
 		public readonly static BindableProperty BorderColorProperty = 
             BindableProperty.Create("OutlineColor", 
                 typeof(Color), 
-                typeof(EnhancedFrame), 
+                typeof(RoundedFrame), 
                 Color.Default, 
                 BindingMode.OneWay);
 
 		public readonly static BindableProperty BorderWidthProperty = 
             BindableProperty.Create("BorderWidth", 
                 typeof(int), 
-                typeof(EnhancedFrame), 2, 
+                typeof(RoundedFrame), 2, 
                 BindingMode.OneWay);
 
         /// <summary>
         /// The Border Width.
         /// </summary>
 		public int BorderWidth {
-			get { return (int)GetValue(EnhancedFrame.BorderWidthProperty); }
-			set { SetValue(EnhancedFrame.BorderWidthProperty, value); }
+			get { return (int)GetValue(RoundedFrame.BorderWidthProperty); }
+			set { SetValue(RoundedFrame.BorderWidthProperty, value); }
 		}
 
         /// <summary>
         /// The Color of the Border.
         /// </summary>
 		public Color BorderColor {
-			get { return (Color)GetValue(EnhancedFrame.BorderColorProperty); }
-			set { SetValue(EnhancedFrame.BorderColorProperty, value); }
+			get { return (Color)GetValue(RoundedFrame.BorderColorProperty); }
+			set { SetValue(RoundedFrame.BorderColorProperty, value); }
 		}
 
         /// <summary>
         /// The Border Corners Radius.
         /// </summary>
 		public int CornerRadius {
-			get { return (int)GetValue(EnhancedFrame.CornerRadiusProperty); }
-			set { SetValue(EnhancedFrame.CornerRadiusProperty, value); }
+			get { return (int)GetValue(RoundedFrame.CornerRadiusProperty); }
+			set { SetValue(RoundedFrame.CornerRadiusProperty, value); }
 		}
 
 	}

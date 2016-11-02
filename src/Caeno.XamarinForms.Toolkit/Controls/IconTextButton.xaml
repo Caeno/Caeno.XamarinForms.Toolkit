@@ -3,15 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="Caeno.XamarinForms.Toolkit.IconTextButton"
              Padding="0,8">
-    <Grid x:Name="TheGrid">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-
+    <StackLayout x:Name="ButtonPanel"
+                 HorizontalOptions="Center"
+                 Orientation="Horizontal">
         <Image x:Name="TheImage" />
         <Label x:Name="TheText"
                Grid.Column="1"
                VerticalOptions="Center" />
-    </Grid>
+    </StackLayout>
 </ContentView>

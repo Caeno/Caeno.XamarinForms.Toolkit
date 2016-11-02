@@ -51,7 +51,7 @@
     <Compile Include="Controls\CpfEntry.xaml.cs">
       <DependentUpon>CpfEntry.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\EnhancedFrame.cs" />
+    <Compile Include="Controls\RoundedFrame.cs" />
     <Compile Include="Controls\EnhancedPicker.cs" />
     <Compile Include="Controls\EnhancedTabbedPage.cs" />
     <Compile Include="Controls\EnhancedViewCell.cs" />

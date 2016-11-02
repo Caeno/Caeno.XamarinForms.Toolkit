@@ -18,7 +18,7 @@ namespace Caeno.XamarinForms.Toolkit.Droid
 
         public static void Initialize() {
             CircularImageRenderer.Initialize();
-            EnhancedFrameRenderer.Initialize();
+            RoundedFrameRenderer.Initialize();
             GridViewRenderer.Initialize();
         }
 

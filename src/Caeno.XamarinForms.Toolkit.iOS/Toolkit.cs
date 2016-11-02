@@ -13,7 +13,7 @@ namespace Caeno.XamarinForms.Toolkit.iOS
         public static void Initialize() {
             BasePageRenderer.Initialize();
             CircularImageRenderer.Initialize();
-            EnhancedFrameRenderer.Initialize();
+            RoundedFrameRenderer.Initialize();
             EnhancedTabbedRenderer.Initialize();
             EnhancedViewCellRenderer.Initialize();
             GridViewRenderer.Initialize();

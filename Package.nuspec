@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Caeno.XamarinForms.Toolkit</id>
-    <version>1.0.0-B4</version>
+    <version>1.0.0-B7</version>
     <authors>Rafael Veronezi</authors>
     <owners>Rafael Veronezi</owners>
     <!--<licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>-->
@@ -11,6 +11,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A set tools provided by Caeno to ease development of Xamarin.Forms Applications.</description>
     <releaseNotes>
+      Renamed EnhancedFrame to RoundedFrame.
       Added GridView, IconTextButton and ImageButton Controls.
     </releaseNotes>
     <copyright>Copyright Caeno 2016</copyright>

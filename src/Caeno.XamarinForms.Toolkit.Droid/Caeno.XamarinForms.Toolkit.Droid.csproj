@@ -98,7 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Renderers\CircularImageRenderer.cs" />
-    <Compile Include="Renderers\EnhancedFrameRenderer.cs" />
+    <Compile Include="Renderers\RoundedFrameRenderer.cs" />
     <Compile Include="Renderers\GridViewRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
